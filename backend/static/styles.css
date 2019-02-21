@@ -1,0 +1,213 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	overflow-y: hidden;
+	margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.app {
+	box-shadow: 0 10px 20px gray, 0 6px 6px gray;
+	flex-direction: column;
+	height: 100vh;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+div {
+	display: flex;
+}
+
+.header {
+	z-index: 5;
+	flex-shrink: 0;
+}
+.header-button:hover {
+	background-color: #402081;
+}
+
+.header-button {
+	background-color: #4d2c91;
+	border: none;
+	padding: 17px;
+	width: 50%;
+	line-height: 0;
+	font-size: 20px;
+	color: #fff;
+}
+
+.folder-view {
+	display: flex;
+	flex-direction: column;
+	margin-left: 0px;
+	margin-right: 0px;
+	flex: 1 1 auto;
+}
+
+ul {
+	padding: 5px;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding-left: 15px;
+	padding-right: 15px;
+	list-style: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.folder-name-container > .edit {
+	background-color: #7e57c2;
+	color: #fff;
+	font-size: 22px;
+	vertical-align: bottom;
+	padding: 10px;
+}
+
+.folder-name-container {
+	box-shadow: 0 2px 5px 0px gray;
+	align-items: center;
+	text-align: center;
+	background-color: #7e57c2;
+	color: #fff;
+	margin-right: 0px;
+	margin-left: 0px;
+	flex-shrink: 0;
+	z-index: 4;
+}
+
+.folder-back:hover {
+	background-color: #7050b2;
+}
+
+.folder-back {
+	background: url("folder-back.png") no-repeat center;
+	background-size: 36px;
+	flex: 0 0 45px;
+	width: 45px;
+	height: 45px;
+	border: none;
+	display: inline;
+}
+
+ul > li:last-child {
+	border-bottom: 0px;
+}
+
+li {
+	height: 32px;
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid gray;
+}
+
+ul > li:hover {
+	background-color: #eee;
+}
+
+.footer > .edit {
+	height: 48px;
+	color: transparent;
+	background-size: 32px;
+}
+
+.footer > .edit:first-child {
+	background: url("task-add.svg") no-repeat center;
+	background-size: 32px;
+}
+
+.footer > .edit:last-child {
+	background: url("folder-add.svg") no-repeat center;
+	background-size: 32px;
+}
+
+.footer > .edit:focus {
+	color: #000;
+	background: none;
+}
+
+.footer > .edit:hover {
+	background-color: #eee;
+}
+
+li .edit {
+	flex: 1 1 auto;
+	line-height: 32px;
+}
+
+.edit {
+	margin: 0;
+	font-size: 20px;
+	vertical-align: top;
+	flex: 1 1 auto;
+	padding: 0px;
+	border: none;
+	background: transparent;
+}
+
+.footer > .edit {
+	text-align: center;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.footer {
+	z-index: 5;
+	box-shadow: 0px -3px 8px -3px #333;
+	margin-left: 0px;
+	margin-right: 0px;
+	flex-shrink: 0;
+}
+
+.up {
+	background: url("up.png") center no-repeat;
+}
+.down {
+	background: url("down.png") center no-repeat;
+}
+
+.delete {
+	background: url("delete.png") center no-repeat;
+}
+
+.folder-icon {
+	background: url("folder.svg") center no-repeat;
+}
+
+.task-toggle:checked {
+	background: url("done.png") center no-repeat;
+	background-size: 24px 24px;
+}
+
+.task-toggle {
+	background: url("not-done.png") center no-repeat;
+}
+
+.up, .down, .delete, .folder-icon, .task-toggle {
+	width: 32px;
+	height: 100%;
+	padding: 0px;
+	margin: 0;
+	-webkit-appearance: none;
+	border: none;
+	flex-shrink: 0;
+	background-size: 24px 24px;
+}
+.up, .down, .delete {
+	float: right;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		width: 50%;
+		margin-left: 25%;
+	}
+}
